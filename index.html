@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mik is learning</title>
+  <link rel="stylesheet" href="style.css?v=2">
+  <!-- MathJax for rendering LaTeX formulas -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <h1>Mik is learning</h1>
+  </header>
+
+<div class="container">
+  <nav id="sidebar">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+    <main>
+      <section class="intro">
+        <h2>Welcome, traveler!</h2>
+        this is Mik writing. Let me guide you through the content of this narrow corner of the web. As I told you, I'm Mik, a guy trying to learn how the world works in many of its different facets. This website was born with the very human intention of sharing my (limited) knowledge with my contemporaries.
+        <br>
+        Mostly, you'll find physics and computer sience related stuff here. 
+        <br>
+        From time to time, I also enjoy writing about arts and philosophy—even if I’m far from an expert. I hope you’ll find something here that sparks your curiosity.  
+        <br>
+        Well, enough talk, I’ll let you get back to your exploring.
+        <br>
+        Fair winds on yer journey!
+        
+        
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Mik is learning</p>
+  </footer>
+  
+  <script>
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const sidebar = document.querySelector("nav");
+  let overlay = document.createElement("div");
+  overlay.className = "menu-overlay";
+  document.body.appendChild(overlay);
+  
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+    toggleBtn.classList.toggle("hidden");
+  });
+  
+  overlay.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+    toggleBtn.classList.remove("hidden");
+  });
+  </script>
+
+
+
+</body>
+</html>
