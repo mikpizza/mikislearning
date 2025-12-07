@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Playground post - Demo</title>
+  <link rel="stylesheet" href="../style.css?v=2">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <h1>Mik is learning</h1>
+  </header>
+
+  <div class="container">
+    <nav id="sidebar">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html" class="active">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Playground post</h2>
+      <p class="post-meta">Jan 2025 · Demo</p>
+      <img class="post-hero" src="../supermassive-black-hole.jpg" alt="Colorful accretion disk illustration">
+
+      <p>This post is a quick checklist to see that figures, equation numbering, references, and MathJax all work together. It also exercises inline math like \( e^{i\\pi} + 1 = 0 \) right in the text.</p>
+
+      <figure class="post-figure" id="fig-demo">
+        <img class="post-inline-image" src="../neocities.png" alt="Placeholder inline demo graphic">
+        <figcaption>
+          <span class="fig-title">Demo graphic</span>
+          <span class="fig-caption">Simple figure to prove numbering and sizing behave.</span>
+        </figcaption>
+      </figure>
+
+      <p>You can see <span class="fig-ref" data-fig="fig-demo"></span> stays within the content width on mobile and desktop.</p>
+
+      <p class="math-snippet" id="eq-energy">
+        <span class="math-label">Energy-mass relation</span>
+        <span class="math-content">\( E = mc^2 \)</span>
+        <span class="math-eq-label"></span>
+      </p>
+
+      <p class="math-snippet" id="eq-gauss">
+        <span class="math-label">Gaussian integral</span>
+        <span class="math-content">\( \int_{0}^{\infty} e^{-x^2} \, dx = \tfrac{\sqrt{\pi}}{2} \)</span>
+        <span class="math-eq-label"></span>
+      </p>
+
+      <p class="math-snippet no-color" id="eq-lorentz">
+        <span class="math-content">\( \gamma = \frac{1}{\sqrt{1 - \frac{v^2}{c^2}}} \)</span>
+        <span class="math-eq-label"></span>
+      </p>
+
+      <p>We can refer back to <span class="eq-ref" data-eq="eq-energy"></span> for the mass-energy idea, <span class="eq-ref" data-eq="eq-gauss"></span> for the Gaussian integral, and <span class="eq-ref" data-eq="eq-lorentz"></span> for the Lorentz factor.</p>
+
+      <p><a class="read-more" href="../blog.html">← Back to blog</a></p>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; Mik is learning 2025</p>
+  </footer>
+
+  <script>
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const sidebar = document.querySelector("nav");
+  let overlay = document.createElement("div");
+  overlay.className = "menu-overlay";
+  document.body.appendChild(overlay);
+
+  // Auto-fill figure and equation references using existing order on the page.
+  const figures = Array.from(document.querySelectorAll("figure.post-figure"));
+  const figNumberById = new Map();
+  figures.forEach((fig, idx) => {
+    if (fig.id) {
+      figNumberById.set(fig.id, idx + 1);
+    }
+  });
+  document.querySelectorAll(".fig-ref[data-fig]").forEach((ref) => {
+    const target = ref.getAttribute("data-fig");
+    if (target && figNumberById.has(target)) {
+      ref.textContent = `Figure ${figNumberById.get(target)}`;
+    }
+  });
+
+  const equations = Array.from(document.querySelectorAll(".math-snippet"));
+  const eqNumberById = new Map();
+  equations.forEach((eq, idx) => {
+    if (eq.id) {
+      eqNumberById.set(eq.id, idx + 1);
+    }
+  });
+  document.querySelectorAll(".eq-ref[data-eq]").forEach((ref) => {
+    const target = ref.getAttribute("data-eq");
+    if (target && eqNumberById.has(target)) {
+      ref.textContent = `Equation (${eqNumberById.get(target)})`;
+    }
+  });
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+    toggleBtn.classList.toggle("hidden");
+  });
+
+  overlay.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+    toggleBtn.classList.remove("hidden");
+  });
+  </script>
+</body>
+</html>
