@@ -125,7 +125,12 @@ main h2 {
 }
 
 .search-bar {
-  margin: 0 0 16px 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 720px;
 }
 
 .search-bar label {
@@ -234,6 +239,14 @@ main h2 {
   counter-increment: figure-counter;
 }
 
+.posts-grid img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .post-figure .post-inline-image {
   width: 100%;
   max-width: 100%;
@@ -293,6 +306,7 @@ main h2 {
   box-sizing: border-box;
   position: relative;
   padding-right: 3.6em;
+  overflow-x: auto;
 }
 
 .math-label {
@@ -338,6 +352,16 @@ main h2 {
 }
 
 @media (max-width: 520px) {
+  .math-snippet {
+    padding-right: 2.6em;
+  }
+
+  .math-eq-label {
+    top: auto;
+    bottom: 8px;
+    transform: none;
+  }
+
   .posts-grid {
     grid-template-columns: 1fr;
     gap: 14px;
