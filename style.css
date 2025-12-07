@@ -131,6 +131,7 @@ main h2 {
   gap: 8px;
   width: 100%;
   max-width: 720px;
+  align-self: stretch;
 }
 
 .search-bar label {
@@ -380,6 +381,20 @@ main h2 {
     max-width: 100%;
     max-height: 200px;
   }
+}
+
+/* Make search bar full-width on mobile */
+@media (max-width: 768px) {
+  .search-bar {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* MathJax containers: prevent overflow on small screens */
+mjx-container {
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .read-more:hover {
