@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Scientific Blog</title>
+  <title>About - Mik is learning</title>
   <link rel="stylesheet" href="style.css?v=2">
-  <!-- MathJax for rendering LaTeX formulas -->
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
@@ -14,79 +13,66 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&amp;display=swap" rel="stylesheet">
 </head>
-
 <body>
   <header>
     <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
     <h1>Mik is learning</h1>
   </header>
 
-<div class="container">
-  <nav id="sidebar">
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <nav id="sidebar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+      </ul>
+    </nav>
 
     <main>
-      <h2>Post Title</h2>
-      <p class="post-meta">Month YYYY · Category</p>
-      <img class="post-hero" src="neocities.png" alt="Post hero image">
+      <h2>About me</h2>
+      <p class="post-meta">Curious human · Physics + code</p>
+      <img class="post-hero" src="neocities.png" alt="Portrait or emblem for Mik">
 
-      <p>Intro paragraph goes here. Replace with the opening that sets context for the post.</p>
-      <p>Body paragraph. Expand on the topic, add data, and link to sources as needed.</p>
+      <p>Hey, I am Mik. This little corner of the web is where I collect the threads I am pulling on: physics puzzles, code experiments, and the occasional detour into art or philosophy. I write to learn, to remember, and to share.</p>
 
-      <figure class="post-figure">
-        <img class="post-inline-image" src="neocities.png" alt="Inline illustration or photo">
-        <figcaption>
-          <span class="fig-title">Inline illustration</span>
-          <span class="fig-caption">An inline illustration placed inside the post body.</span>
-        </figcaption>
-      </figure>
-
-      <p class="math-snippet">
-        <span class="math-label">Formula:</span>
-        <span class="math-content">\( E = mc^2 \)</span>
-        <span class="math-eq-label"></span>
-      </p>
+      <p>What you will find here:</p>
+      <ul>
+        <li>Notes on physics concepts I am studying, often with short derivations.</li>
+        <li>Programming experiments, tools, and debugging stories.</li>
+        <li>Personal reflections on how these disciplines connect.</li>
+      </ul>
 
       <p class="math-snippet no-color">
-        <span class="math-content">\( \int_{0}^{\infty} e^{-x^2} \, dx = \tfrac{\sqrt{\pi}}{2} \)</span>
+        <span class="math-content">\( \nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0} \)</span>
         <span class="math-eq-label"></span>
       </p>
 
-      <p>Closing paragraph. Summarize the key takeaway or next steps for the reader.</p>
-      <p><a class="read-more" href="blog.html">← Back to blog</a></p>
+      <p>If you are exploring similar topics, I hope this site saves you a few steps—or sparks a new question. Fair winds on your journey.</p>
     </main>
   </div>
 
   <footer>
-    <p>&copy; Mik is learning 2025</p>
+    <p>&copy; 2025 Mik is learning</p>
   </footer>
-  
+
   <script>
   const toggleBtn = document.querySelector(".menu-toggle");
   const sidebar = document.querySelector("nav");
   let overlay = document.createElement("div");
   overlay.className = "menu-overlay";
   document.body.appendChild(overlay);
-  
+
   toggleBtn.addEventListener("click", () => {
     sidebar.classList.toggle("active");
     overlay.classList.toggle("active");
     toggleBtn.classList.toggle("hidden");
   });
-  
+
   overlay.addEventListener("click", () => {
     sidebar.classList.remove("active");
     overlay.classList.remove("active");
     toggleBtn.classList.remove("hidden");
   });
   </script>
-
-
-
 </body>
 </html>

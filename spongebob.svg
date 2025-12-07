@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">SpongeBob placeholder illustration</title>
+  <desc id="desc">A simple yellow sponge character placeholder with a big smile.</desc>
+  <rect width="640" height="360" fill="#87CEEB"/>
+  <rect x="160" y="40" width="320" height="280" rx="30" fill="#f6e65e" stroke="#d9c443" stroke-width="6"/>
+  <circle cx="260" cy="160" r="32" fill="#fff"/>
+  <circle cx="380" cy="160" r="32" fill="#fff"/>
+  <circle cx="260" cy="160" r="16" fill="#4a321a"/>
+  <circle cx="380" cy="160" r="16" fill="#4a321a"/>
+  <rect x="220" y="105" width="200" height="16" rx="8" fill="#e3d24d"/>
+  <path d="M250 220 Q320 270 390 220" fill="none" stroke="#4a321a" stroke-width="10" stroke-linecap="round"/>
+  <rect x="220" y="270" width="200" height="24" fill="#c13d3d"/>
+  <rect x="220" y="294" width="200" height="18" fill="#4a321a"/>
+  <rect x="260" y="294" width="30" height="18" fill="#fff"/>
+  <rect x="350" y="294" width="30" height="18" fill="#fff"/>
+  <rect x="190" y="230" width="30" height="40" fill="#f6e65e" stroke="#d9c443" stroke-width="4"/>
+  <rect x="420" y="230" width="30" height="40" fill="#f6e65e" stroke="#d9c443" stroke-width="4"/>
+  <circle cx="200" cy="250" r="6" fill="#c13d3d"/>
+  <circle cx="440" cy="250" r="6" fill="#c13d3d"/>
+  <rect x="160" y="70" width="320" height="12" fill="#d9c443" opacity="0.8"/>
+</svg>

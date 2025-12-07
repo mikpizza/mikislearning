@@ -33,19 +33,18 @@
     <main>
       <section class="intro">
         <h2>Welcome, traveler!</h2>
-        this is Mik writing. Let me guide you through the content of this narrow corner of the web. As I told you, I'm Mik, a guy trying to learn how the world works in many of its different facets. This website was born with the very human intention of sharing my (limited) knowledge with my contemporaries.
-        <br>
-        Mostly, you'll find physics and computer sience related stuff here. 
-        <br>
-        From time to time, I also enjoy writing about arts and philosophy—even if I’m far from an expert. I hope you’ll find something here that sparks your curiosity.  
-        <br>
-        Well, enough talk, I’ll let you get back to your exploring.
-        <br>
-        Fair winds on yer journey!
-        <br>
-        $$ E = mc $$ $$\Xi_\rho (P) = \sum \frac{Tr^2(P \rho)}{d}$$
-        
-        
+        <p>this is Mik writing. Let me guide you through the content of this narrow corner of the web. As I told you, I'm Mik, a guy trying to learn how the world works in many of its different facets. This website was born with the very human intention of sharing my (limited) knowledge with my contemporaries.</p>
+        <p>Mostly, you'll find physics and computer sience related stuff here.</p>
+        <p>From time to time, I also enjoy writing about arts and philosophy—even if I’m far from an expert. I hope you’ll find something here that sparks your curiosity.</p>
+        <p>Well, enough talk, I’ll let you get back to your exploring.<br>Fair winds on yer journey!</p>
+        <p>$$ E = mc $$ $$\\Xi_\\rho (P) = \\sum \\frac{Tr^2(P \\rho)}{d}$$</p>
+      </section>
+
+      <div class="section-divider" aria-hidden="true"></div>
+
+      <section class="latest-posts">
+        <h3>Latest posts</h3>
+        <div class="posts-grid" id="latest-posts-grid" aria-live="polite"></div>
       </section>
     </main>
   </div>
@@ -72,6 +71,166 @@
     overlay.classList.remove("active");
     toggleBtn.classList.remove("hidden");
   });
+
+  // Populate latest posts grid from manifest (fallbacks for file:// viewing)
+  const fallbackPosts = [
+    {
+      title: "Inside the event horizon",
+      category: "Black holes",
+      date: "2025-01-11",
+      datePretty: "Jan 2025",
+      url: "posts/post-11.html",
+      image: "supermassive-black-hole.jpg",
+      imageAlt: "Supermassive black hole",
+      description: "Notes on the Schwarzschild radius and the boundary of no return.",
+      content: "Black holes stretch intuition: time slows, spacetime curves, signals cannot escape beyond the event horizon. Energy, mass, and information near the boundary; Schwarzschild radius scales with mass."
+    },
+    {
+      title: "Jellyfish jam lessons",
+      category: "Cartoons",
+      date: "2025-01-10",
+      datePretty: "Jan 2025",
+      url: "posts/post-10.html",
+      image: "spongebob.svg",
+      imageAlt: "SpongeBob placeholder illustration",
+      description: "Jellyfishing joy, bounded chaos, and keeping feedback loops short.",
+      content: "Jellyfishing with SpongeBob: playful experiments with a plan so chaos stays bounded. In coding terms, keep feedback loops short—try, observe, adjust."
+    },
+    {
+      title: "SpongeBob curiosity",
+      category: "Cartoons",
+      date: "2025-01-09",
+      datePretty: "Jan 2025",
+      url: "posts/post-9.html",
+      image: "spongebob.svg",
+      imageAlt: "SpongeBob placeholder illustration",
+      description: "Curiosity as a multiplier—simple questions that shake assumptions.",
+      content: "SpongeBob asks simple questions that flip situations. Probe assumptions before calculations or code. Curiosity multiplies connections as exposure grows."
+    },
+    {
+      title: "Patrick wisdom",
+      category: "Cartoons",
+      date: "2025-01-08",
+      datePretty: "Jan 2025",
+      url: "posts/post-8.html",
+      image: "patrick.svg",
+      imageAlt: "Patrick placeholder illustration",
+      description: "Patrick’s simple questions meet a scaling-law aside.",
+      content: "Patrick reminds us simple questions can reveal the most. Starfish area to volume ratio shrinks as size grows; curiosity scales the other way."
+    },
+    {
+      title: "A sponge moment",
+      category: "Cartoons",
+      date: "2025-01-07",
+      datePretty: "Jan 2025",
+      url: "posts/post-7.html",
+      image: "spongebob.svg",
+      imageAlt: "SpongeBob placeholder illustration",
+      description: "Cartoon detour with SpongeBob cheer and a quick surface-to-volume math note."
+    },
+    {
+      title: "New post",
+      category: "Physics note",
+      date: "2025-01-06",
+      datePretty: "Jan 2025",
+      url: "posts/post-1.html",
+      image: "supermassive-black-hole.jpg",
+      imageAlt: "Supermassive black hole",
+      description: "Quick note on energy and mass—short derivation and context."
+    },
+    {
+      title: "New post",
+      category: "Quick update",
+      date: "2025-01-05",
+      datePretty: "Jan 2025",
+      url: "posts/post-2.html",
+      image: "neocities.png",
+      imageAlt: "Abstract placeholder",
+      description: "Brief status update and notes from the week."
+    },
+    {
+      title: "New post",
+      category: "Experiments",
+      date: "2025-01-04",
+      datePretty: "Jan 2025",
+      url: "posts/post-3.html",
+      image: "neocities.png",
+      imageAlt: "Abstract placeholder",
+      description: "Lab experiments log with a Gaussian integral reminder."
+    },
+    {
+      title: "Another post",
+      category: "Lab notes",
+      date: "2025-01-03",
+      datePretty: "Jan 2025",
+      url: "posts/post-4.html",
+      image: "neocities.png",
+      imageAlt: "Lab equipment",
+      description: "Notes from the lab bench and ongoing measurements."
+    },
+    {
+      title: "Another post",
+      category: "Coding log",
+      date: "2025-01-02",
+      datePretty: "Jan 2025",
+      url: "posts/post-5.html",
+      image: "neocities.png",
+      imageAlt: "Coding log",
+      description: "Coding progress and a couple of debugging wins."
+    },
+    {
+      title: "Another post",
+      category: "Field work",
+      date: "2025-01-01",
+      datePretty: "Jan 2025",
+      url: "posts/post-6.html",
+      image: "neocities.png",
+      imageAlt: "Field landscape",
+      description: "Field notes from recent observations."
+    }
+  ];
+
+  const postsGrid = document.getElementById("latest-posts-grid");
+
+  const renderPosts = (posts) => {
+    const sorted = posts
+      .slice()
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, 6);
+
+    if (!sorted.length) {
+      postsGrid.innerHTML = "<p class=\"post-description\">No posts yet—check back soon.</p>";
+      return;
+    }
+
+    postsGrid.innerHTML = "";
+    sorted.forEach((post) => {
+      const card = document.createElement("article");
+      card.className = "post-card";
+      card.innerHTML = `
+        ${post.image ? `<img class="post-image" src="${post.image}" alt="${post.imageAlt || post.title}">` : ""}
+        <h3>${post.title}</h3>
+        <p class="post-meta">${post.datePretty || post.date} · ${post.category || ""}</p>
+        <p class="post-description">${post.description || ""}</p>
+        <a class="read-more" href="${post.url}">Read more →</a>
+      `;
+      postsGrid.appendChild(card);
+    });
+  };
+
+  fetch("posts/manifest.json")
+    .then((res) => res.json())
+    .then((data) => {
+      if (data && Array.isArray(data.posts) && data.posts.length) {
+        renderPosts(data.posts);
+      } else {
+        renderPosts(fallbackPosts);
+      }
+    })
+    .catch((err) => {
+      console.error("Failed to load posts manifest", err);
+      renderPosts(fallbackPosts);
+    });
   </script>
 
 

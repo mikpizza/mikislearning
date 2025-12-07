@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inside the event horizon - Black holes</title>
+  <link rel="stylesheet" href="../style.css?v=2">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+  <header>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <h1>Mik is learning</h1>
+  </header>
+
+  <div class="container">
+    <nav id="sidebar">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html" class="active">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Inside the event horizon</h2>
+      <p class="post-meta">Jan 2025 · Black holes</p>
+      <img class="post-hero" src="../supermassive-black-hole.jpg" alt="Supermassive black hole">
+
+      <p>Black holes stretch intuition: time slows, spacetime curves, and signals cannot escape beyond the event horizon. I collected a few notes on how energy, mass, and information play together near that boundary.</p>
+      <p>One handy relation: the Schwarzschild radius scales with mass, setting the size of the point of no return.</p>
+
+      <figure class="post-figure" id="fig-horizon">
+        <img class="post-inline-image" src="../supermassive-black-hole.jpg" alt="Disk around a black hole">
+        <figcaption>
+          <span class="fig-title">Accretion disk sketch</span>
+          <span class="fig-caption">Accretion disk sketch to anchor the discussion.</span>
+        </figcaption>
+      </figure>
+
+      <p>Inside <span class="fig-ref" data-fig="fig-horizon"></span> you can imagine the region bounded by the event horizon; we tie the radius of that boundary to the mass in the equation that follows.</p>
+
+      <p class="math-snippet" id="eq-schwarzschild">
+        <span class="math-label">Schwarzschild radius</span>
+        <span class="math-content">\( r_s = \frac{2GM}{c^2} \)</span>
+        <span class="math-eq-label"></span>
+      </p>
+
+      <p>We can now say “at the radius given by <span class="eq-ref" data-eq="eq-schwarzschild"></span>, escape is impossible,” and reuse that reference anywhere else in the text. Every equation on the page will increment automatically.</p>
+
+      <p><a class="read-more" href="../blog.html">← Back to blog</a></p>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; Mik is learning 2025</p>
+  </footer>
+
+  <script>
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const sidebar = document.querySelector("nav");
+  let overlay = document.createElement("div");
+  overlay.className = "menu-overlay";
+  document.body.appendChild(overlay);
+
+  // Auto-fill figure and equation references using existing order on the page.
+  const figures = Array.from(document.querySelectorAll("figure.post-figure"));
+  const figNumberById = new Map();
+  figures.forEach((fig, idx) => {
+    if (fig.id) {
+      figNumberById.set(fig.id, idx + 1);
+    }
+  });
+  document.querySelectorAll(".fig-ref[data-fig]").forEach((ref) => {
+    const target = ref.getAttribute("data-fig");
+    if (target && figNumberById.has(target)) {
+      ref.textContent = `Figure ${figNumberById.get(target)}`;
+    }
+  });
+
+  const equations = Array.from(document.querySelectorAll(".math-snippet"));
+  const eqNumberById = new Map();
+  equations.forEach((eq, idx) => {
+    if (eq.id) {
+      eqNumberById.set(eq.id, idx + 1);
+    }
+  });
+  document.querySelectorAll(".eq-ref[data-eq]").forEach((ref) => {
+    const target = ref.getAttribute("data-eq");
+    if (target && eqNumberById.has(target)) {
+      ref.textContent = `Equation (${eqNumberById.get(target)})`;
+    }
+  });
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+    toggleBtn.classList.toggle("hidden");
+  });
+
+  overlay.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+    toggleBtn.classList.remove("hidden");
+  });
+  </script>
+</body>
+</html>

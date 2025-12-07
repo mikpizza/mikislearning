@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Patrick placeholder illustration</title>
+  <desc id="desc">Simple pink starfish character placeholder.</desc>
+  <rect width="640" height="360" fill="#9fd8ff"/>
+  <path d="M320 60 L380 200 L520 220 L400 280 L430 360 L320 310 L210 360 L240 280 L120 220 L260 200 Z" fill="#f7a3c1" stroke="#e57fa6" stroke-width="8" stroke-linejoin="round"/>
+  <circle cx="300" cy="150" r="22" fill="#fff"/>
+  <circle cx="340" cy="150" r="22" fill="#fff"/>
+  <circle cx="300" cy="150" r="10" fill="#4a321a"/>
+  <circle cx="340" cy="150" r="10" fill="#4a321a"/>
+  <path d="M285 210 Q320 240 355 210" fill="none" stroke="#4a321a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M270 260 Q320 280 370 260" fill="#80c98d" stroke="#5aaa6b" stroke-width="6" stroke-linejoin="round"/>
+  <circle cx="265" cy="262" r="6" fill="#5aaa6b"/>
+  <circle cx="375" cy="262" r="6" fill="#5aaa6b"/>
+</svg>

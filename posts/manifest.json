@@ -1,0 +1,125 @@
+{
+  "posts": [
+    {
+      "title": "Inside the event horizon",
+      "category": "Black holes",
+      "date": "2025-01-11",
+      "datePretty": "Jan 2025",
+      "url": "posts/post-11.html",
+      "image": "supermassive-black-hole.jpg",
+      "imageAlt": "Supermassive black hole",
+      "description": "Notes on the Schwarzschild radius and the boundary of no return.",
+      "content": "Black holes stretch intuition: time slows, spacetime curves, signals cannot escape beyond the event horizon. Energy, mass, and information near the boundary; Schwarzschild radius scales with mass."
+    },
+    {
+      "title": "Jellyfish jam lessons",
+      "category": "Cartoons",
+      "date": "2025-01-10",
+      "datePretty": "Jan 2025",
+      "url": "posts/post-10.html",
+      "image": "spongebob.svg",
+      "imageAlt": "SpongeBob placeholder illustration",
+      "description": "Jellyfishing joy, bounded chaos, and keeping feedback loops short.",
+      "content": "Jellyfishing with SpongeBob: playful experiments with a plan so chaos stays bounded. In coding terms, keep feedback loops short—try, observe, adjust."
+    },
+    {
+      "title": "SpongeBob curiosity",
+      "category": "Cartoons",
+      "date": "2025-01-09",
+      "datePretty": "Jan 2025",
+      "url": "posts/post-9.html",
+      "image": "spongebob.svg",
+      "imageAlt": "SpongeBob placeholder illustration",
+      "description": "Curiosity as a multiplier—simple questions that shake assumptions.",
+      "content": "SpongeBob asks simple questions that flip situations. Probe assumptions before calculations or code. Curiosity multiplies connections as exposure grows."
+    },
+    {
+      "title": "Patrick wisdom",
+      "category": "Cartoons",
+      "date": "2025-01-08",
+      "datePretty": "Jan 2025",
+      "url": "posts/post-8.html",
+      "image": "patrick.svg",
+      "imageAlt": "Patrick placeholder illustration",
+      "description": "Patrick’s simple questions meet a scaling-law aside.",
+      "content": "Patrick reminds us simple questions can reveal the most. Starfish area to volume ratio shrinks as size grows; curiosity scales the other way."
+    },
+    {
+      "title": "A sponge moment",
+      "category": "Cartoons",
+      "date": "2025-01-07",
+      "datePretty": "Jan 2025",
+      "url": "posts/post-7.html",
+      "image": "spongebob.svg",
+      "imageAlt": "SpongeBob placeholder illustration",
+      "description": "Cartoon detour with SpongeBob cheer and a quick surface-to-volume math note.",
+      "content": "SpongeBob’s optimism keeps learning playful. Pineapple surface area to volume shrinks with shell thickness while he still fits his gadgets."
+    },
+    {
+      "title": "New post",
+      "category": "Physics note",
+      "date": "2025-01-06",
+      "datePretty": "Jan 2025",
+      "url": "posts/post-1.html",
+      "image": "supermassive-black-hole.jpg",
+      "imageAlt": "Supermassive black hole",
+      "description": "Quick note on energy and mass—short derivation and context.",
+      "content": "Physics note touching on energy and mass; includes the formula E = mc^2 with short context."
+    },
+    {
+      "title": "New post",
+      "category": "Quick update",
+      "date": "2025-01-05",
+      "datePretty": "Jan 2025",
+      "url": "posts/post-2.html",
+      "image": "neocities.png",
+      "imageAlt": "Abstract placeholder",
+      "description": "Brief status update and notes from the week.",
+      "content": "Quick update with weekly notes, short status, and brief reflections."
+    },
+    {
+      "title": "New post",
+      "category": "Experiments",
+      "date": "2025-01-04",
+      "datePretty": "Jan 2025",
+      "url": "posts/post-3.html",
+      "image": "neocities.png",
+      "imageAlt": "Abstract placeholder",
+      "description": "Lab experiments log with a Gaussian integral reminder.",
+      "content": "Experiments log with lorem ipsum details plus Gaussian integral \\( \\int_0^{\\infty} e^{-x^2} dx = \\frac{\\sqrt{\\pi}}{2} \\)."
+    },
+    {
+      "title": "Another post",
+      "category": "Lab notes",
+      "date": "2025-01-03",
+      "datePretty": "Jan 2025",
+      "url": "posts/post-4.html",
+      "image": "neocities.png",
+      "imageAlt": "Lab equipment",
+      "description": "Notes from the lab bench and ongoing measurements.",
+      "content": "Lab notes covering ongoing measurements and observations with lorem ipsum filler."
+    },
+    {
+      "title": "Another post",
+      "category": "Coding log",
+      "date": "2025-01-02",
+      "datePretty": "Jan 2025",
+      "url": "posts/post-5.html",
+      "image": "neocities.png",
+      "imageAlt": "Coding log",
+      "description": "Coding progress and a couple of debugging wins.",
+      "content": "Coding log discussing debugging wins, progress, and ongoing work."
+    },
+    {
+      "title": "Another post",
+      "category": "Field work",
+      "date": "2025-01-01",
+      "datePretty": "Jan 2025",
+      "url": "posts/post-6.html",
+      "image": "neocities.png",
+      "imageAlt": "Field landscape",
+      "description": "Field notes from recent observations.",
+      "content": "Field work observations, visits, and notes on site with lorem ipsum filler."
+    }
+  ]
+}
