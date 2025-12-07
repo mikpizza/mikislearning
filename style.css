@@ -167,23 +167,25 @@ main h2 {
 }
 
 .post-image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 0.75em;
-  object-fit: cover;
   display: block;
-  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 0 0.75em 0;
 }
 
 .post-hero {
+  display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
+  max-height: 320px;
+  object-fit: cover;
   border-radius: 12px;
   margin: 0 0 1em 0;
-  object-fit: cover;
-  display: block;
-  aspect-ratio: 16 / 9;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
@@ -212,7 +214,8 @@ main h2 {
 
   .post-image,
   .post-hero {
-    aspect-ratio: 4 / 3;
+    max-width: 100%;
+    max-height: 200px;
   }
 }
 
