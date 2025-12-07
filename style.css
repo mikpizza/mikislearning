@@ -141,6 +141,8 @@ main h2 {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
   display: flex;
   flex-direction: column;
+  min-width: 0; /* allow cards to shrink inside the grid (fixes Firefox overflow) */
+  overflow: hidden;
 }
 
 .post-card:hover {
@@ -202,10 +204,32 @@ main h2 {
   align-self: flex-end;
 }
 
+/* Math boxes */
+.math-snippet {
+  background: #f5f8ff;
+  border-left: 3px solid #4a6cf7;
+  border-radius: 6px;
+  padding: 8px 10px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.math-label {
+  font-weight: 600;
+  color: #324d9c;
+}
+
 @media (max-width: 520px) {
   .posts-grid {
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+
+  .post-card {
+    padding: 14px;
   }
 
   .post-card {
@@ -221,19 +245,6 @@ main h2 {
 
 .read-more:hover {
   text-decoration: underline;
-}
-
-.math-snippet {
-  background: #f5f8ff;
-  border-left: 3px solid #4a6cf7;
-  border-radius: 6px;
-  padding: 8px 10px;
-  display: inline-block;
-}
-
-.math-label {
-  font-weight: 600;
-  color: #324d9c;
 }
 
 /* ==============================
