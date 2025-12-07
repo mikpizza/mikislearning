@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Scientific Blog</title>
+  <link rel="stylesheet" href="style.css?v=2">
+  <!-- MathJax for rendering LaTeX formulas -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <h1>Mik is learning</h1>
+  </header>
+
+<div class="container">
+  <nav id="sidebar">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+    <main>
+      <h2>Recent posts</h2>
+      <section class="posts-grid">
+        <article class="post-card">
+          <h3>New post</h3>
+          <p class="post-meta">Jan 2025 · Quick update</p>
+          <img class="post-image" src="neocities.png" alt="Abstract placeholder image">
+          <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ante vel arcu lacinia ornare.</p>
+          <a class="read-more" href="posts/post-2.html">Read more →</a>
+        </article>
+
+        <article class="post-card">
+          <h3>New post</h3>
+          <p class="post-meta">Jan 2025 · Physics note</p>
+          <img class="post-image" src="supermassive-black-hole.jpg" alt="Supermassive black hole">
+          <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ultricies augue et urna efficitur.</p>
+          <p class="math-snippet">
+            <span class="math-label">Formula:</span><br>
+            \( E = mc^2\)
+          </p>
+          <a class="read-more" href="posts/post-1.html">Read more →</a>
+        </article>
+
+        <article class="post-card">
+          <h3>New post</h3>
+          <p class="post-meta">Jan 2025 · Experiments</p>
+          <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere felis nec justo interdum.</p>
+          <a class="read-more" href="posts/post-3.html">Read more →</a>
+        </article>
+
+        <article class="post-card">
+          <h3>Another post</h3>
+          <p class="post-meta">Jan 2025 · Lab notes</p>
+          <img class="post-image" src="neocities.png" alt="Lab equipment">
+          <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac nunc ut libero iaculis consequat.</p>
+          <a class="read-more" href="posts/post-4.html">Read more →</a>
+        </article>
+
+        <article class="post-card">
+          <h3>Another post</h3>
+          <p class="post-meta">Jan 2025 · Coding log</p>
+          <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum felis vel dui posuere placerat.</p>
+          <a class="read-more" href="posts/post-5.html">Read more →</a>
+        </article>
+
+        <article class="post-card">
+          <h3>Another post</h3>
+          <p class="post-meta">Jan 2025 · Field work</p>
+          <img class="post-image" src="neocities.png" alt="Field landscape">
+          <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at ex non odio tempus fermentum.</p>
+          <a class="read-more" href="posts/post-6.html">Read more →</a>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; Mik is learning 2025</p>
+  </footer>
+  
+  <script>
+  const toggleBtn = document.querySelector(".menu-toggle");
+  const sidebar = document.querySelector("nav");
+  let overlay = document.createElement("div");
+  overlay.className = "menu-overlay";
+  document.body.appendChild(overlay);
+  
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+    toggleBtn.classList.toggle("hidden");
+  });
+  
+  overlay.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+    toggleBtn.classList.remove("hidden");
+  });
+  </script>
+
+
+
+</body>
+</html>

@@ -3,78 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Scientific Blog</title>
-  <link rel="stylesheet" href="style.css?v=2">
-  <!-- MathJax for rendering LaTeX formulas -->
+  <title>Another post - Coding log</title>
+  <link rel="stylesheet" href="../style.css?v=2">
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&amp;display=swap" rel="stylesheet">
 </head>
-
 <body>
   <header>
     <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
     <h1>Mik is learning</h1>
   </header>
 
-<div class="container">
-  <nav id="sidebar">
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+  <div class="container">
+    <nav id="sidebar">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../blog.html" class="active">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
 
     <main>
-      <h2>Recent posts</h2>
-      <section class="posts-grid">
-        <article class="post-card">
-          <h3>Post title</h3>
-          <p>Some text for the first post.</p>
-          <p class="math-snippet">
-            <span class="math-label">Formula:</span><br>
-            \( E = mc^2\)
-          </p>
-        </article>
-
-        <article class="post-card">
-          <h3>Another post</h3>
-          <p>Another short paragraph to show multiple cards.</p>
-        </article>
-      </section>
+      <h2>Another post</h2>
+      <p class="post-meta">Jan 2025 · Coding log</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam condimentum felis vel dui posuere placerat. Integer posuere, purus et tincidunt tristique, ipsum enim mattis metus, vitae fermentum lacus arcu id metus.</p>
+      <p>Nulla bibendum vel augue in ultricies. Vivamus venenatis dui elit, at bibendum erat pharetra vel. Aliquam pharetra velit neque, a bibendum eros sagittis vitae.</p>
+      <p><a class="read-more" href="../blog.html">← Back to blog</a></p>
     </main>
   </div>
 
   <footer>
     <p>&copy; Mik is learning 2025</p>
   </footer>
-  
+
   <script>
   const toggleBtn = document.querySelector(".menu-toggle");
   const sidebar = document.querySelector("nav");
   let overlay = document.createElement("div");
   overlay.className = "menu-overlay";
   document.body.appendChild(overlay);
-  
+
   toggleBtn.addEventListener("click", () => {
     sidebar.classList.toggle("active");
     overlay.classList.toggle("active");
     toggleBtn.classList.toggle("hidden");
   });
-  
+
   overlay.addEventListener("click", () => {
     sidebar.classList.remove("active");
     overlay.classList.remove("active");
     toggleBtn.classList.remove("hidden");
   });
   </script>
-
-
-
 </body>
 </html>
